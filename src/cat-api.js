@@ -1,6 +1,3 @@
-const loaderPar = document.querySelector(".loader");
-const errorPar = document.querySelector('.error');
-errorPar.style.display = "none";
 export let fetchBreeds = () =>{
     const url = "https://api.thecatapi.com/v1/breeds";
     return fetch(url).then(response => response.json()).catch((error)=>{
