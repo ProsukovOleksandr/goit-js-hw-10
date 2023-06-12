@@ -22,7 +22,10 @@ fetchBreeds()
       return option;
     });
     selectEl.innerHTML  = [...options];
-  })
+  }).catch(()=>{
+      loaderPar.style.display = "none";
+      errorPar.style.display = "block";
+    });
 
 selectEl.addEventListener('input', event => {
   event.preventDefault();
@@ -37,5 +40,8 @@ selectEl.addEventListener('input', event => {
         createCatInfo(info, img);
         loaderPar.style.display = "none";
       }
-    })
+    }).catch(()=>{
+        loaderPar.style.display = "none";
+        errorPar.style.display = "block";
+      });
 })
